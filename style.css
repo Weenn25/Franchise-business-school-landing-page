@@ -240,6 +240,31 @@ ul {
 	transform: translateX(13px);
 }
 
+/* Use Montserrat for header content */
+.header .content { font-family: 'Montserrat', sans-serif; }
+.header .content h1 { font-weight: 700; }
+.header .content .border,
+.header .content .slog { font-weight: 300; }
+
+/* Background loop video for .sub (placed behind content) */
+.sub { position: relative; overflow: hidden; }
+.sub video#bg-video {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	transform: translate(-50%, -50%);
+	object-fit: cover;
+	z-index: 0;
+	pointer-events: none;
+	opacity: 0.85;
+}
+.sub .para,
+.sub .video-box { position: relative; z-index: 1; }
+
 /* Animations used in header/nav */
 @keyframes left {
 	0%,
@@ -518,7 +543,7 @@ ul {
 	margin: 0;
 	color: #fff;
 	text-align: center;
-	background: linear-gradient(rgba(12, 112, 154, .9), rgba(73, 21, 143, .9)) center/cover no-repeat fixed, url(Images/tech13.jpg) center/cover no-repeat fixed;
+	background: linear-gradient(rgba(12, 112, 154, .9), rgba(73, 21, 143, .9)) center/cover no-repeat fixed, url(Images/school13.jpg) center/cover no-repeat fixed;
 }
 .skill-section h1 {
 	padding: 6px 30px;
